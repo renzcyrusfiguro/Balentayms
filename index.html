@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Balentayms Day!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <audio id="mySong" loop>
+        <source src="aya.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="page1" class="container">
+        <h1>Hi, Eliza! Practice lang hehehe</h1>
+        <div class="gif-container">
+            <img src="https://media.tenor.com/3XVBVE7Gv9kAAAAi/avocado-cute-avocado.gif" alt="avocado">
+        </div>
+        <button class="main-btn" onclick="startExperience()">Continue</button>
+    </div>
+
+    <div id="page2" class="container hidden">
+        <h1>Will you be my balentaym?</h1>
+        <div class="gif-container">
+            <img src="https://media1.tenor.com/m/vXeKWNNr01gAAAAC/shoot-your-shot-hey.gif" alt="shot">
+        </div>
+        <div class="btn-group">
+            <button id="yesBtn" onmouseover="moveButton()" ontouchstart="moveButton()">Yes</button>
+            <button id="noBtn" onclick="celebrate()">No</button>
+        </div>
+    </div>
+
+    <div id="page3" class="container hidden">
+        <h1>Buti naman kasi busy din ako 🤪</h1>
+        <div class="gif-container">
+            <img src="https://media1.tenor.com/m/tF7dO7TbQWkAAAAd/i-know-ball.gif" alt="i know ball">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
