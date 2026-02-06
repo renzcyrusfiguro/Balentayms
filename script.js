@@ -1,25 +1,26 @@
 function startExperience() {
-    const audio = document.getElementById('mySong');
-
-    audio.play().then(() => {
-        console.log("Music started!");
-    }).catch(e => {
-        console.log("Audio error:", e);
-    });
-
-    showPage('page2');
+    showPage('page1b');
 }
 
 function showPage(pageId) {
     document.querySelectorAll('.container').forEach(div => {
         div.classList.add('hidden');
     });
+    
     document.getElementById(pageId).classList.remove('hidden');
+
+    if (pageId === 'page2') {
+        const audio = document.getElementById('mySong');
+        audio.play().then(() => {
+            console.log("Music started on Page 2!");
+        }).catch(e => {
+            console.log("Audio error:", e);
+        });
+    }
 }
 
 function moveButton() {
     const btn = document.getElementById('yesBtn');
-
     btn.style.position = 'fixed';
 
     const x = Math.random() * (window.innerWidth - btn.offsetWidth - 20);
@@ -31,7 +32,6 @@ function moveButton() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const yesBtn = document.getElementById('yesBtn');
-
     yesBtn.addEventListener('touchstart', function (e) {
         e.preventDefault();
         moveButton();
