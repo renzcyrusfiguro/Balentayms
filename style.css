@@ -41,22 +41,24 @@ button {
     transition: background-color 0.2s;
 }
 
+
 .btn-group {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 25px;
     min-height: 60px;
+    position: relative;
 }
 
 #yesBtn {
-    position: fixed;
+    position: relative; 
     z-index: 999;
-    transition: 0.1s ease;
 }
 
-#page2 #yesBtn {
+#noBtn {
     position: relative;
+    z-index: 998;
 }
 
 .gif-container img {
